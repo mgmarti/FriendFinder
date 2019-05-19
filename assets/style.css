@@ -1,0 +1,25 @@
+body {
+    background-image: url(./images/main-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: white;
+
+
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.562);
+    float: none;
+    margin-top: 200px;
+    padding: 2rem;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-image: url(./images/main-bg-sized.jpg);
+    }
+}
