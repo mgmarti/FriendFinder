@@ -3,6 +3,7 @@
 var express = require("express");
 var path = require("path");
 
+
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -20,3 +21,6 @@ app.use(express.json());
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
+
+
+module.exports = app;
