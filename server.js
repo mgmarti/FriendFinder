@@ -2,7 +2,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-
+var friends = require("./app/data/friends");
 
 // Sets up the Express App
 // =============================================================
@@ -15,6 +15,8 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
+app.use('/static', express.static('public'))
+
 
 // Starts the server to begin listening
 // =============================================================
@@ -25,3 +27,4 @@ app.listen(PORT, function () {
 //Routes
 // =============================================================
 require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
