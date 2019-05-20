@@ -22,6 +22,6 @@ app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
 
-//Exporting express requirement
+//Routes
 // =============================================================
-module.exports = app;
+require("./app/routing/htmlRoutes")(app);
