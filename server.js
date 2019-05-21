@@ -15,7 +15,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-app.use('/static', express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 // Starts the server to begin listening
