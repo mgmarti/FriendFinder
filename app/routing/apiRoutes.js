@@ -7,7 +7,7 @@ module.exports = function (app) {
         return res.json(friends);
     });
 
-    //Create new friends
+    //Create new friends 
     // =============================================================
     app.post("/api/friends", function (req, res) {
         var newfriend = req.body;
