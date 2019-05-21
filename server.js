@@ -15,16 +15,15 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static('app/public'));
 
+//Routes
+// =============================================================
+require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
-
-//Routes
-// =============================================================
-require("./app/routing/htmlRoutes")(app);
-require("./app/routing/apiRoutes")(app);
