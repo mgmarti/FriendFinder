@@ -21,6 +21,13 @@
             <hr>
         </div>
         <div class="content">
+            <h3><strong>About You</strong></h3>
+            <h5>Name (Required)</h5>
+            <input type="text" id="name" class="form-control" required>
+
+            <h5>Link to Photo Image (Required)</h5>
+            <input type="text" id="photo" class="form-control" required>
+            <br>
             <h5><strong>Question 1</strong></h5>
             <label for"q1">Your mind is always buzzing with unexplored ideas and plans.</label><br>
             <select class="chosen-select" id="q1">
@@ -131,15 +138,49 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <br><br>
-            <button type="button" class="btn btn-light"><a href="survey.html">Go to Survey <i
-                        class="fas fa-arrow-circle-right fa-md"></i></a></button>
+            <button type="submit" class="btn btn-light" id="submit">Submit</button>
             <hr>
+
+            <!-- Modal -->
+            <div id="results" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title"><strong>You Matched With:</strong></h2>
+                        </div>
+                        <div class="modal-body">
+                            <h2 id="name"></h2>
+                            <img id="img" src="https://cdn.pixabay.com/photo/2016/02/11/16/59/dog-1194083__340.jpg"
+                                alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </div>
 
     <!-- JavaScript -->
     <script>
+        $("#submit").on("click", function () {
+            event.preventDefault();
+
+        });
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
 </body>
 

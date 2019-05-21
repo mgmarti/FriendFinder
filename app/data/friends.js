@@ -1,7 +1,7 @@
 
 const friends = [{
         name: "Aria",
-        photo: "https://cdn.pixabay.com/photo/2014/04/26/04/25/fitness-332278__340.jpg",
+        photo: "https://cdn.pixabay.com/photo/2013/02/10/00/02/bear-79838__340.jpg",
         scores: [
             5,
             1,
@@ -17,7 +17,7 @@ const friends = [{
     },
     {
         name: "Kat",
-        photo: "https://cdn.pixabay.com/photo/2016/03/23/04/01/beautiful-1274056__340.jpg",
+        photo: "https://cdn.pixabay.com/photo/2018/04/20/17/18/cat-3336579__340.jpg",
         scores: [
             3,
             1,
