@@ -30,7 +30,7 @@
             <br>
             <h5><strong>Question 1</strong></h5>
             <label for"q1">Your mind is always buzzing with unexplored ideas and plans.</label><br>
-            <select class="chosen-select" id="q1">
+            <select class="chosen-answer" id="q1">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -41,7 +41,7 @@
             <br><br>
             <h5><strong>Question 2</strong></h5>
             <label for"q2">Generally speaking, you rely more on your experience than your imagination.</label><br>
-            <select class="chosen-select" id="q2">
+            <select class="chosen-answer" id="q2">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -52,7 +52,7 @@
             <br><br>
             <h5><strong>Question 3</strong></h5>
             <label for"q3">You find it easy to stay relaxed and focused even when there is some pressure.</label><br>
-            <select class="chosen-select" id="q3">
+            <select class="chosen-answer" id="q3">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -63,7 +63,7 @@
             <br><br>
             <h5><strong>Question 4</strong></h5>
             <label for"q4">You rarely do something just out of sheer curiosity.</label><br>
-            <select class="chosen-select" id="q4">
+            <select class="chosen-answer" id="q4">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -74,7 +74,7 @@
             <br><br>
             <h5><strong>Question 5</strong></h5>
             <label for"q5">People can rarely upset you.</label><br>
-            <select class="chosen-select" id="q5">
+            <select class="chosen-answer" id="q5">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -85,7 +85,7 @@
             <br><br>
             <h5><strong>Question 6</strong></h5>
             <label for"q6">It is often difficult to relate to other people's feelings.</label><br>
-            <select class="chosen-select" id="q6">
+            <select class="chosen-answer" id="q6">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -96,7 +96,7 @@
             <br><br>
             <h5><strong>Question 7</strong></h5>
             <label for"q7">In a discussion, truth should be more important than people’s sensitivities.</label><br>
-            <select class="chosen-select" id="q7">
+            <select class="chosen-answer" id="q7">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -107,7 +107,7 @@
             <br><br>
             <h5><strong>Question 8</strong></h5>
             <label for"q8">You rarely get carried away by fantasies and ideas.</label><br>
-            <select class="chosen-select" id="q8">
+            <select class="chosen-answer" id="q8">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -117,8 +117,9 @@
             </select>
             <br><br>
             <h5><strong>Question 9</strong></h5>
-            <label for"q9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label><br>
-            <select class="chosen-select" id="q9">
+            <label for"q9">You think that everyone’s views should be respected regardless of whether they are supported
+                by facts or not.</label><br>
+            <select class="chosen-answer" id="q9">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -129,7 +130,7 @@
             <br><br>
             <h5><strong>Question 10</strong></h5>
             <label for"q10">You feel more energetic after spending time with a group of people.</label><br>
-            <select class="chosen-select" id="q10">
+            <select class="chosen-answer" id="q10">
                 <option value=""></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -138,50 +139,65 @@
                 <option value="5">5 (Strongly Agree)</option>
             </select>
             <br><br>
-            <button type="submit" class="btn btn-light" id="submit">Submit</button>
+            <button type="submit" class="btn btn-light" id="submit-answers">Submit</button>
             <hr>
 
             <!-- Modal -->
             <div id="results" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
-                    <!-- Modal content-->
+                    <!-- Modal Content-->
                     <div class="modal-content">
+
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h2 class="modal-title"><strong>You Matched With:</strong></h2>
+                            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                            <h2 class="modal-title"><strong>You matched with:</strong></h2>
                         </div>
+
                         <div class="modal-body">
-                            <h2 id="name"></h2>
-                            <img id="img" src="https://cdn.pixabay.com/photo/2016/02/11/16/59/dog-1194083__340.jpg"
-                                alt="">
+                            <h2 id="matchName"></h2>
+                            <img id="matchImg" src="" alt="Image Not Found" style="max-width: 350px;">
                         </div>
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
+
                     </div>
 
                 </div>
             </div>
 
-        </div>
-    </div>
 
-    <!-- JavaScript -->
-    <script>
-        $("#submit").on("click", function () {
-            event.preventDefault();
-            
-        });
-    </script>
+            <!-- jQuery/Bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous">
+            </script>
 
-    <!-- Bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+            <!-- JavaScript -->
+            <script>
+                $(document).ready(function () {
+                    console.log("ready!");
+
+                    function validateForm() {
+                      
+                    }
+
+                    // $("#submit-answers").on("click", function () {
+                    //     event.preventDefault();
+                    //     validateForm();
+                    //     $("#results").modal("toggle");
+                    // })
+                });
+            </script>
+
 </body>
 
 </html>
