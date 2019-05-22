@@ -10,19 +10,21 @@ module.exports = function (app) {
     //Create new friends 
     // =============================================================
     app.post("/api/friends", function (req, res) {
-        let newFriend = req.body;
-        let newFriendScore = [];
-        let totalDifference;
-        
+        let newFriend = req.body.scores;
+        let scores = [];
+        //Tracks difference between user answer
+        let totalDifference = 0;
+       
+        //Loops through current friends
+        for (let i = 0; i < friends.length; i++) {
 
-
-            for (var i = 0; i < .length; i++) {
-                for (var i = 0; i < .length; i++) {
+            //Loops through scores
+            for (let j = 0; j < newFriend.length; j++) {
                 
-                }
             }
-              
-
+        }
+//Math.abs() to prevent negative values
+Math.abs()
 
         //Sends user info to friends data array
         friends.push(newFriend);
@@ -30,4 +32,3 @@ module.exports = function (app) {
     });
 
 }
-
