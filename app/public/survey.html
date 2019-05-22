@@ -182,20 +182,39 @@
             </script>
 
             <!-- JavaScript -->
-            <script>
-                $(document).ready(function () {
-                    console.log("ready!");
+            <script type="text/javascript">
+                // event.preventDefault();
 
-                    function validateForm() {
-                      
+                $("#submit-answers").on("click", function () {
+                    //Creates new friend object and pulls all values
+                    let newFriend = {
+                        name: $("#name").val().trim(),
+                        image: $("#photo").val().trim(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]
                     }
+                    console.log(newFriend);
+                    return false;
 
-                    // $("#submit-answers").on("click", function () {
-                    //     event.preventDefault();
-                    //     validateForm();
-                    //     $("#results").modal("toggle");
-                    // })
-                });
+                 
+                    let currentUrl = window.location.origin;
+
+                    $.post(currentUrl + "/api/friends", newFriend, function (data) {
+             
+                    })
+
+                    // $("#results").modal("toggle");
+                })
             </script>
 
 </body>
