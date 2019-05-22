@@ -186,36 +186,28 @@
                 // event.preventDefault();
 
                 $("#submit-answers").on("click", function () {
-                    //Creates new friend object and pulls all values
-                    let newFriend = {
-                        name: $("#name").val().trim(),
-                        image: $("#photo").val().trim(),
-                        scores: [
-                            $("#q1").val(),
-                            $("#q2").val(),
-                            $("#q3").val(),
-                            $("#q4").val(),
-                            $("#q5").val(),
-                            $("#q6").val(),
-                            $("#q7").val(),
-                            $("#q8").val(),
-                            $("#q9").val(),
-                            $("#q10").val()
-                        ]
-                    }
-                    console.log(newFriend);
-                    return false;
+     
+                        let newFriendData = {
+                            name: $("#name").val(),
+                            image: $("#photo").val(),
+                            scores: [
+                                $("#q1").val(),
+                                $("#q2").val(),
+                                $("#q3").val(),
+                                $("#q4").val(),
+                                $("#q5").val(),
+                                $("#q6").val(),
+                                $("#q7").val(),
+                                $("#q8").val(),
+                                $("#q9").val(),
+                                $("#q10").val()
+                            ]}
 
-                    //Pulls origin url of where the user is at the moment
-                    let currentUrl = window.location.origin;
 
-                    $.post(currentUrl + "/api/friends", newFriend, function (data) {
-                        $("#matchName").text(data.name);
-                        $("#matchImg").attr("src", data.photo);
 
-                        $("#results").modal("toggle");
-                    });
-
+                        $.post(currentURL + '/api/friends', newFriendData, function(data) {
+                           
+                        });
                 });
             </script>
 
