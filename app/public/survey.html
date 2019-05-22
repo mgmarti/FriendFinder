@@ -206,15 +206,17 @@
                     console.log(newFriend);
                     return false;
 
-                 
+                    //Pulls origin url of where the user is at the moment
                     let currentUrl = window.location.origin;
 
                     $.post(currentUrl + "/api/friends", newFriend, function (data) {
-             
-                    })
+                        $("#matchName").text(data.name);
+                        $("#matchImg").attr("src", data.photo);
 
-                    // $("#results").modal("toggle");
-                })
+                        $("#results").modal("toggle");
+                    });
+
+                });
             </script>
 
 </body>

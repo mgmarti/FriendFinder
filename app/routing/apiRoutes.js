@@ -10,11 +10,24 @@ module.exports = function (app) {
     //Create new friends 
     // =============================================================
     app.post("/api/friends", function (req, res) {
-        var newfriend = req.body;
+        let newFriend = req.body;
+        let newFriendScore = [];
+        let totalDifference;
+        
+
+
+            for (var i = 0; i < .length; i++) {
+                for (var i = 0; i < .length; i++) {
+                
+                }
+            }
+              
+
 
         //Sends user info to friends data array
-        friends.push(newfriend);
-        res.json(newfriend);
+        friends.push(newFriend);
+        res.json(newFriend);
     });
 
 }
+
