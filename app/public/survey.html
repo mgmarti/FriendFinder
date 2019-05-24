@@ -186,28 +186,34 @@
                 // event.preventDefault();
 
                 $("#submit-answers").on("click", function () {
-     
-                        let newFriendData = {
-                            name: $("#name").val(),
-                            image: $("#photo").val(),
-                            scores: [
-                                $("#q1").val(),
-                                $("#q2").val(),
-                                $("#q3").val(),
-                                $("#q4").val(),
-                                $("#q5").val(),
-                                $("#q6").val(),
-                                $("#q7").val(),
-                                $("#q8").val(),
-                                $("#q9").val(),
-                                $("#q10").val()
-                            ]}
+
+                    let newFriendData = {
+                        name: $("#name").val(),
+                        image: $("#photo").val(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]
+                    };
 
 
 
-                        $.post(currentURL + '/api/friends', newFriendData, function(data) {
-                           
-                        });
+                    $.post('/api/friends', newFriendData, function (data) {
+                        $("#matchName").text(data.name);
+                        $("#matchImg").attr("src", data.photo);
+
+                        //Display Modal 
+                        $("#results").modal("toggle");
+
+                    });
                 });
             </script>
 
