@@ -1,22 +1,30 @@
 body {
-    background-image: url(../images/main-bg.jpg);
+    background-image: url(../images/main-bg-2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: white;
+    background-color: greenyellow;
 
 
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: white;
     width: 50rem;
     float: none;
     margin-top: 200px;
     padding: 2rem;
 }
 
+
+a {
+    color: black;
+}
+
+.btn {
+    background-color: greenyellow;
+    }
 
 
 @media only screen and (max-width: 767px) {
