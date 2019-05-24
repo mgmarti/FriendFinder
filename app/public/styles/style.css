@@ -17,6 +17,15 @@ body {
     padding: 2rem;
 }
 
+.container-survey {
+    background-color: white;
+    width: 60rem;
+    float: none;
+    padding: 2rem;
+    margin-left:auto;
+    margin-right: auto;
+}
+
 
 a {
     color: black;
